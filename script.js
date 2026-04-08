@@ -2,132 +2,124 @@
 
 const EVENTS = [
   {
-    id:'paper-presentation', name:'PAPER PRESENTATION', icon:'fa-file-alt',
-    category:'TECHNICAL', color:'#00f5ff',
+    id:'paper-presentation', name:'Paper Presentation', icon:'fa-file-alt',
+    category:'TECHNICAL', color:'#4DE3FF',
     shortDesc:'Present your research to a panel of experts.',
     description:'Showcase original research in any CS domain. Individual or team. A great platform to gain academic exposure and constructive feedback from industry professionals.',
     venue:'Main Seminar Hall, Block A', date:'March 15, 2026 · 9:00 AM', team:'1–3 members', prize:'₹5000 + Certificate',
-    registerLink:'https://forms.google.com/#paper-presentation'
+    registerLink:'https://unstop.com/p/paper-presentation-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671599'
   },
   {
-    id:'poster-presentation', name:'POSTER PRESENTATION', icon:'fa-image',
-    category:'TECHNICAL', color:'#38bdf8',
+    id:'poster-presentation', name:'Poster Presentation', icon:'fa-image',
+    category:'TECHNICAL', color:'#5BFFB0',
     shortDesc:'Communicate your idea through a visual poster.',
     description:'Design a technically sound and visually compelling poster. Open to all CS and allied domains. Judged on content, clarity, and design.',
     venue:'Exhibition Hall, Block B', date:'March 15, 2026 · 10:00 AM', team:'1–2 members', prize:'₹3000 + Certificate',
-    registerLink:'https://forms.google.com/#poster-presentation'
+    registerLink:'https://unstop.com/p/poster-presentation-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1669200'
   },
   {
-    id:'project-expo', name:'PROJECT EXPO', icon:'fa-flask',
-    category:'TECHNICAL', color:'#00ffcc',
+    id:'project-expo', name:'Project Expo', icon:'fa-flask',
+    category:'TECHNICAL', color:'#C7FF63',
     shortDesc:'Demo your live working project.',
     description:'From IoT to AI-powered apps — bring your working prototype and impress the judges. All innovative projects across computing domains are welcome.',
     venue:'Ground Floor Lab, Block C', date:'March 15, 2026 · 11:00 AM', team:'2–4 members', prize:'₹8000 + Certificate',
-    registerLink:'https://forms.google.com/#project-expo'
+    registerLink:'https://unstop.com/p/project-expo-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671602'
   },
   {
-    id:'prompt-wars', name:'PROMPT WARS', icon:'fa-robot',
-    category:'TECHNICAL', color:'#a855f7',
+    id:'prompt-wars', name:'Prompt Wars', icon:'fa-robot',
+    category:'TECHNICAL', color:'#4DE3FF',
     shortDesc:'Create with cutting-edge AI tools.',
     description:'Use modern AI tools to generate, design, or solve problems in a timed creative challenge. Tasks span image generation, prompt engineering, and AI-assisted coding.',
     venue:'Computer Lab 2, Block A', date:'March 16, 2026 · 9:00 AM', team:'1–2 members', prize:'₹4000 + Certificate',
-    registerLink:'https://forms.google.com/#prompt-wars'
+    registerLink:'https://unstop.com/p/prompt-wars-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671604'
   },
   {
-    id:'bid-n-code', name:'BID-N-CODE', icon:'fa-laptop-code',
-    category:'TECHNICAL', color:'#00f5ff',
+    id:'bid-n-code', name:'Bid N Code', icon:'fa-laptop-code',
+    category:'TECHNICAL', color:'#5BFFB0',
     shortDesc:'Auction-style competitive coding.',
     description:'Bid on programming problems using virtual currency, solve them under time pressure, and outsmart rivals. A unique blend of strategy and coding speed.',
     venue:'Computer Lab 1, Block A', date:'March 16, 2026 · 11:00 AM', team:'1–2 members', prize:'₹5000 + Certificate',
-    registerLink:'https://forms.google.com/#bid-n-code'
+    registerLink:'https://unstop.com/p/bid-n-code-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671606'
   },
   {
-    id:'hack-the-core', name:'HACK THE CORE', icon:'fa-shield-alt',
-    category:'TECHNICAL', color:'#38bdf8',
+    id:'hack-the-core', name:'Hack The Core', icon:'fa-shield-alt',
+    category:'TECHNICAL', color:'#C7FF63',
     shortDesc:'24-hour hackathon — build, break, repeat.',
     description:'The flagship event. 24 hours, real-world problem statements, cross-domain teams. Build solutions that matter. Top teams present to a jury of industry veterans.',
     venue:'Innovation Hub, Block D', date:'March 15–16, 2026 · 10:00 AM', team:'3–5 members', prize:'₹15000 + Trophy',
-    registerLink:'https://forms.google.com/#hack-the-core'
+    registerLink:'https://unstop.com/p/hack-the-core-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671615'
   },
   {
-    id:'cryptic-nexus', name:'CRYPTIC NEXUS', icon:'fa-key',
-    category:'TECHNICAL', color:'#00ffcc',
+    id:'cryptic-nexus', name:'Cryptic Nexus', icon:'fa-key',
+    category:'TECHNICAL', color:'#4DE3FF',
     shortDesc:'Ciphers, puzzles, hidden clues.',
     description:'Decode cyphers, solve cryptographic puzzles, and trace hidden clues across digital and physical realms. Tests logical thinking and cryptography knowledge.',
     venue:'Library Hall, Block E', date:'March 16, 2026 · 2:00 PM', team:'1 member', prize:'₹3000 + Certificate',
-    registerLink:'https://forms.google.com/#cryptic-nexus'
+    registerLink:'https://unstop.com/p/cryptic-nexus-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671611'
   },
   {
-    id:'code-relay', name:'CODE RELAY', icon:'fa-bolt',
-    category:'TECHNICAL', color:'#a855f7',
+    id:'code-relay', name:'Code Relay', icon:'fa-bolt',
+    category:'TECHNICAL', color:'#5BFFB0',
     shortDesc:'Team relay — code, pass, repeat.',
     description:'Each member writes one segment and passes it to the next. Speed, logic, and seamless teamwork are your only weapons.',
     venue:'Computer Lab 3, Block A', date:'March 16, 2026 · 3:00 PM', team:'4 members', prize:'₹6000 + Certificate',
-    registerLink:'https://forms.google.com/#code-relay'
+    registerLink:'https://unstop.com/p/code-relay-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1671605'
   },
   {
-    id:'squid-game', name:'SQUID GAME', icon:'fa-gamepad',
-    category:'NON-TECHNICAL', color:'#f43f5e',
+    id:'squid-game', name:'Squid Game', icon:'fa-gamepad',
+    category:'NON-TECHNICAL', color:'#4DE3FF',
     shortDesc:'Multi-round nerve-testing elimination games.',
     description:'Inspired by the hit series — multi-round games that test nerve, strategy, and survival instincts. Each round eliminates participants until one winner remains.',
     venue:'Open Ground', date:'March 15, 2026 · 3:00 PM', team:'1 member', prize:'₹3000 + Trophy',
-    registerLink:'https://forms.google.com/#squid-game'
+    registerLink:'https://unstop.com/p/squid-game-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672246'
   },
   {
-    id:'treasure-hunt', name:'TREASURE HUNT', icon:'fa-map-marked-alt',
-    category:'NON-TECHNICAL', color:'#fb923c',
+    id:'treasure-hunt', name:'Treasure Hunt', icon:'fa-map-marked-alt',
+    category:'NON-TECHNICAL', color:'#5BFFB0',
     shortDesc:'Campus-wide clue-based race.',
     description:'Follow clues hidden across the campus, solve riddles, and race to find the ultimate treasure before rival teams. Wit and speed both matter.',
     venue:'Entire Campus', date:'March 15, 2026 · 2:00 PM', team:'3–4 members', prize:'₹4000 + Certificate',
-    registerLink:'https://forms.google.com/#treasure-hunt'
+    registerLink:'https://unstop.com/p/treasure-hunt-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672249'
   },
   {
-    id:'ipl-auction', name:'IPL AUCTION', icon:'fa-gavel',
-    category:'NON-TECHNICAL', color:'#facc15',
-    shortDesc:'Build your dream team within budget.',
-    description:'Step into the shoes of an IPL team owner. Bid for players within a budget cap and build the best possible team. Team performance is evaluated through mock matches.',
-    venue:'Conference Hall, Block B', date:'March 16, 2026 · 10:00 AM', team:'2–3 members', prize:'₹2500 + Certificate',
-    registerLink:'https://forms.google.com/#ipl-auction'
-  },
-  {
-    id:'free-fire', name:'FREE FIRE', icon:'fa-fire',
-    category:'NON-TECHNICAL', color:'#f43f5e',
+    id:'free-fire', name:'Free Fire', icon:'fa-fire',
+    category:'NON-TECHNICAL', color:'#C7FF63',
     shortDesc:'Online battle royale tournament.',
     description:'Squad up and compete for the highest eliminations and final zone survival. Online knockout format — bring your best squad.',
     venue:'Online', date:'March 15, 2026 · 4:00 PM', team:'4 members', prize:'₹3000 + Certificate',
-    registerLink:'https://forms.google.com/#free-fire'
+    registerLink:'https://unstop.com/p/free-fire-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672251'
   },
   {
-    id:'bgmi', name:'BGMI', icon:'fa-crosshairs',
-    category:'NON-TECHNICAL', color:'#fb923c',
-    shortDesc:'Battlegrounds Mobile India tournament.',
-    description:'Classic battle royale competition in squad format. Strategize, communicate, and dominate the competition across multiple rounds.',
-    venue:'Online', date:'March 16, 2026 · 2:00 PM', team:'4 members', prize:'₹3000 + Certificate',
-    registerLink:'https://forms.google.com/#bgmi'
-  },
-  {
-    id:'relay-rush', name:'RELAY RUSH', icon:'fa-running',
-    category:'NON-TECHNICAL', color:'#facc15',
+    id:'relay-rush', name:'Relay Rush', icon:'fa-running',
+    category:'NON-TECHNICAL', color:'#4DE3FF',
     shortDesc:'Sprint relay with a digital twist.',
     description:'Classic relay race where each leg includes a quick digital or logical challenge before passing the baton. Speed plus brains.',
     venue:'Sports Ground', date:'March 16, 2026 · 4:00 PM', team:'4 members', prize:'₹2000 + Certificate',
-    registerLink:'https://forms.google.com/#relay-rush'
+    registerLink:'https://unstop.com/p/relay-rush-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672253'
   },
   {
-    id:'movie-hunt', name:'MOVIE HUNT', icon:'fa-film',
-    category:'NON-TECHNICAL', color:'#f43f5e',
+    id:'movie-hunt', name:'Movie Hunt', icon:'fa-film',
+    category:'NON-TECHNICAL', color:'#5BFFB0',
     shortDesc:'Guess movies from frames and clues.',
     description:'Identify movies from stills, audio clips, and cryptic clues across multiple rounds and genres. A paradise for film buffs.',
     venue:'AV Room, Block B', date:'March 15, 2026 · 5:00 PM', team:'1–2 members', prize:'₹2000 + Certificate',
-    registerLink:'https://forms.google.com/#movie-hunt'
+    registerLink:'https://unstop.com/p/movie-hunt-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672257'
   },
   {
-    id:'jail-break', name:'JAIL BREAK', icon:'fa-unlock',
-    category:'NON-TECHNICAL', color:'#fb923c',
+    id:'jail-break', name:'Jail Break', icon:'fa-unlock',
+    category:'NON-TECHNICAL', color:'#C7FF63',
     shortDesc:'Escape-room style team challenge.',
     description:'Solve physical and logical puzzles to "break out" before time runs out. High energy, high pressure, and huge fun.',
     venue:'Room 204, Block C', date:'March 16, 2026 · 11:00 AM', team:'3–4 members', prize:'₹3000 + Certificate',
-    registerLink:'https://forms.google.com/#jail-break'
+    registerLink:'https://unstop.com/p/jail-break-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672259'
+  },
+  {
+    id:'ipl-auction', name:'IPL Auction', icon:'fa-gavel',
+    category:'NON-TECHNICAL', color:'#4DE3FF',
+    shortDesc:'Build your dream team within budget.',
+    description:'Step into the shoes of an IPL team owner. Bid for players within a budget cap and build the best possible team. Team performance is evaluated through mock matches.',
+    venue:'Conference Hall, Block B', date:'March 16, 2026 · 10:00 AM', team:'2–3 members', prize:'₹2500 + Certificate',
+    registerLink:'https://unstop.com/p/ipl-auction-cse-acumen-2026-vasavi-college-of-engineering-vce-hyderabad-1672260'
   },
 ];
 
@@ -209,20 +201,20 @@ const STUDENT_LEADS = [
   }
 
   function draw() {
-    ctx.fillStyle = 'rgba(1, 10, 20, 0.12)';
+    ctx.fillStyle = 'rgba(4, 7, 13, 0.14)';
     ctx.fillRect(0, 0, width, height);
-    ctx.font = `${FONT_SIZE}px "Share Tech Mono", monospace`;
+    ctx.font = `${FONT_SIZE}px "Turret Road", monospace`;
 
     for (let i = 0; i < drops.length; i += 1) {
       const char = CHARS[Math.floor(Math.random() * CHARS.length)];
       const level = Math.random();
 
       if (level > 0.995) {
-        ctx.fillStyle = 'rgba(210, 250, 255, 0.45)';
+        ctx.fillStyle = 'rgba(200, 255, 230, 0.86)';
       } else if (level > 0.94) {
-        ctx.fillStyle = 'rgba(0, 245, 255, 0.28)';
+        ctx.fillStyle = 'rgba(91, 255, 176, 0.58)';
       } else {
-        ctx.fillStyle = 'rgba(0, 102, 136, 0.16)';
+        ctx.fillStyle = 'rgba(77, 227, 255, 0.28)';
       }
 
       ctx.fillText(char, i * FONT_SIZE, drops[i] * FONT_SIZE);
@@ -231,7 +223,7 @@ const STUDENT_LEADS = [
         drops[i] = 0;
       }
 
-      drops[i] += 0.45;
+      drops[i] += 0.52;
     }
 
     requestAnimationFrame(draw);
@@ -303,7 +295,7 @@ const STUDENT_LEADS = [
       position:'absolute',
       width: size + 'px', height: size + 'px',
       borderRadius: '50%',
-      background: Math.random() > 0.5 ? '#00f5ff' : '#a855f7',
+      background: Math.random() > 0.5 ? '#4DE3FF' : '#5BFFB0',
       left: Math.random() * 100 + '%',
       top:  Math.random() * 100 + '%',
       opacity: 0.1 + Math.random() * 0.35,
@@ -346,9 +338,9 @@ const STUDENT_LEADS = [
   const CX = W / 2, CY = H / 2 + 30;
 
   const ORBITS = [
-    { rx:290, ry:100, tilt:0,            color:'#00f5ff', speed: 0.038 },
-    { rx:290, ry:100, tilt:Math.PI/3,   color:'#00ffcc', speed:-0.030 },
-    { rx:290, ry:100, tilt:-Math.PI/3,  color:'#38bdf8', speed: 0.024 },
+    { rx:290, ry:100, tilt:0,            color:'#4DE3FF', speed: 0.038 },
+    { rx:290, ry:100, tilt:Math.PI/3,   color:'#5BFFB0', speed:-0.030 },
+    { rx:290, ry:100, tilt:-Math.PI/3,  color:'#C7FF63', speed: 0.024 },
   ];
   const angles=[0,0,0];
   let frame=0, raf=null, active=false;
@@ -372,8 +364,8 @@ const STUDENT_LEADS = [
   }
   function neonStroke(widths,blurs,alphas){
     widths.forEach((lw,i)=>{
-      ctx.strokeStyle=`rgba(0,245,255,${alphas[i]})`; ctx.lineWidth=lw;
-      ctx.shadowColor='#00f5ff'; ctx.shadowBlur=blurs[i]; ctx.stroke();
+      ctx.strokeStyle=`rgba(160,106,139,${alphas[i]})`; ctx.lineWidth=lw;
+      ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=blurs[i]; ctx.stroke();
     }); ctx.shadowBlur=0;
   }
 
@@ -382,56 +374,56 @@ const STUDENT_LEADS = [
     const t=frame*0.016, gp=0.65+0.35*Math.sin(t*1.3);
 
     shieldPath(CX,CY,SW+28,SH+22);
-    ctx.fillStyle=`rgba(0,200,255,${0.035*gp})`; ctx.shadowColor='#00f5ff'; ctx.shadowBlur=60; ctx.fill(); ctx.shadowBlur=0;
+    ctx.fillStyle=`rgba(160,106,139,${0.035*gp})`; ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=60; ctx.fill(); ctx.shadowBlur=0;
 
     shieldPath(CX,CY,SW+7,SH+5);
     neonStroke([8,5,3,1.4],[35,20,10,4],[0.20*gp,0.38*gp,0.62*gp,1.0]);
 
     shieldPath(CX,CY,SW,SH);
     const body=ctx.createLinearGradient(CX,CY-SH,CX,CY+SH);
-    body.addColorStop(0,'rgba(0,18,50,0.91)'); body.addColorStop(0.45,'rgba(0,8,28,0.95)'); body.addColorStop(1,'rgba(0,18,52,0.89)');
+    body.addColorStop(0,'rgba(4,0,94,0.91)'); body.addColorStop(0.45,'rgba(4,0,94,0.95)'); body.addColorStop(1,'rgba(68,11,212,0.89)');
     ctx.fillStyle=body; ctx.fill();
 
     ctx.save(); shieldPath(CX,CY,SW,SH); ctx.clip();
-    for(let sy=CY-SH-30;sy<CY+SH;sy+=3){ctx.fillStyle='rgba(0,255,220,0.011)';ctx.fillRect(CX-SW-15,sy,(SW+15)*2,1);}
+    for(let sy=CY-SH-30;sy<CY+SH;sy+=3){ctx.fillStyle='rgba(74,124,89,0.011)';ctx.fillRect(CX-SW-15,sy,(SW+15)*2,1);}
     const shimY=((frame*1.6)%(SH*2.3))+CY-SH-30;
     const shimG=ctx.createLinearGradient(CX-SW,shimY,CX+SW,shimY+4);
-    shimG.addColorStop(0,'rgba(0,255,220,0)'); shimG.addColorStop(0.5,'rgba(0,255,220,0.28)'); shimG.addColorStop(1,'rgba(0,255,220,0)');
+    shimG.addColorStop(0,'rgba(74,124,89,0)'); shimG.addColorStop(0.5,'rgba(74,124,89,0.28)'); shimG.addColorStop(1,'rgba(74,124,89,0)');
     ctx.fillStyle=shimG; ctx.fillRect(CX-SW-15,shimY,(SW+15)*2,3);
     ctx.restore();
 
     shieldPath(CX,CY,SW-14,SH-14); neonStroke([4,2,1],[16,8,2],[0.10*gp,0.25*gp,0.48*gp]);
 
-    ctx.save(); ctx.font='900 28px "Orbitron",sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.save(); ctx.font='900 28px "Train One",sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
     const cseY=CY-SH-50;
-    ctx.shadowColor='#00f5ff'; ctx.shadowBlur=35; ctx.fillStyle='rgba(0,245,255,0.4)'; ctx.fillText('C · S · E',CX,cseY);
-    ctx.shadowBlur=15; ctx.fillStyle='rgba(0,245,255,0.7)'; ctx.fillText('C · S · E',CX,cseY);
-    ctx.shadowBlur=5; ctx.fillStyle='#ccffff'; ctx.fillText('C · S · E',CX,cseY); ctx.restore();
+    ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=35; ctx.fillStyle='rgba(160,106,139,0.4)'; ctx.fillText('C · S · E',CX,cseY);
+    ctx.shadowBlur=15; ctx.fillStyle='rgba(160,106,139,0.7)'; ctx.fillText('C · S · E',CX,cseY);
+    ctx.shadowBlur=5; ctx.fillStyle='#ffd7f6'; ctx.fillText('C · S · E',CX,cseY); ctx.restore();
 
     const acumenY=CY-90;
-    ctx.save(); ctx.font='900 84px "Orbitron",sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
-    ctx.shadowColor='#00f5ff'; ctx.shadowBlur=40; ctx.fillStyle='rgba(0,245,255,0.18)'; ctx.fillText('ACUMEN',CX,acumenY);
-    ctx.shadowBlur=20; ctx.fillStyle='rgba(0,245,255,0.35)'; ctx.fillText('ACUMEN',CX,acumenY);
+    ctx.save(); ctx.font='900 84px "Train One",sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=40; ctx.fillStyle='rgba(160,106,139,0.18)'; ctx.fillText('ACUMEN',CX,acumenY);
+    ctx.shadowBlur=20; ctx.fillStyle='rgba(160,106,139,0.35)'; ctx.fillText('ACUMEN',CX,acumenY);
     const tg=ctx.createLinearGradient(CX-240,acumenY-40,CX+240,acumenY+40);
-    tg.addColorStop(0,'#00f5ff'); tg.addColorStop(0.5,'#ffffff'); tg.addColorStop(1,'#00f5ff');
+    tg.addColorStop(0,'#4DE3FF'); tg.addColorStop(0.5,'#ffd7f6'); tg.addColorStop(1,'#4DE3FF');
     ctx.fillStyle=tg; ctx.shadowBlur=8; ctx.fillText('ACUMEN',CX,acumenY); ctx.restore();
 
     // Lock — bigger, more prominent
     ctx.save();
     const lockY=CY+35, lw=90, lh=68, shY=lockY-lh/2-26;
     ctx.beginPath(); ctx.arc(CX,shY,26,Math.PI,0); ctx.lineTo(CX+26,lockY-lh/2); ctx.moveTo(CX-26,lockY-lh/2); ctx.lineTo(CX-26,shY);
-    ctx.strokeStyle='#00f5ff'; ctx.lineWidth=9; ctx.shadowColor='#00f5ff'; ctx.shadowBlur=30; ctx.stroke();
-    ctx.strokeStyle='#ccffff'; ctx.lineWidth=4; ctx.shadowBlur=10; ctx.stroke();
+    ctx.strokeStyle='#4DE3FF'; ctx.lineWidth=9; ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=30; ctx.stroke();
+    ctx.strokeStyle='#ffd7f6'; ctx.lineWidth=4; ctx.shadowBlur=10; ctx.stroke();
     ctx.beginPath();
     if(ctx.roundRect) ctx.roundRect(CX-lw/2,lockY-lh/2,lw,lh,12);
     else ctx.rect(CX-lw/2,lockY-lh/2,lw,lh);
-    ctx.fillStyle='rgba(0,18,50,0.95)'; ctx.fill();
-    ctx.strokeStyle='#00f5ff'; ctx.lineWidth=5; ctx.shadowBlur=22; ctx.stroke();
+    ctx.fillStyle='rgba(4,0,94,0.95)'; ctx.fill();
+    ctx.strokeStyle='#4DE3FF'; ctx.lineWidth=5; ctx.shadowBlur=22; ctx.stroke();
     ctx.strokeStyle='rgba(204,255,255,0.8)'; ctx.lineWidth=2; ctx.shadowBlur=0; ctx.stroke();
     ctx.beginPath(); ctx.arc(CX,lockY-6,10,0,Math.PI*2);
     ctx.moveTo(CX-7,lockY+18); ctx.lineTo(CX+7,lockY+18); ctx.lineTo(CX+4,lockY-2); ctx.lineTo(CX-4,lockY-2);
-    ctx.fillStyle='#00f5ff'; ctx.shadowColor='#00f5ff'; ctx.shadowBlur=40; ctx.fill();
-    ctx.fillStyle='#ffffff'; ctx.shadowBlur=10; ctx.fill(); ctx.restore();
+    ctx.fillStyle='#4DE3FF'; ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=40; ctx.fill();
+    ctx.fillStyle='#ffd7f6'; ctx.shadowBlur=10; ctx.fill(); ctx.restore();
 
     ctx.restore();
   }
@@ -528,8 +520,8 @@ const STUDENT_LEADS = [
         if(segProg<=0) return;
         const ex=seg.x1+(seg.x2-seg.x1)*segProg, ey=seg.y1+(seg.y2-seg.y1)*segProg;
         ctx.beginPath(); ctx.moveTo(seg.x1,seg.y1); ctx.lineTo(ex,ey);
-        ctx.strokeStyle='#00f5ff'; ctx.lineWidth=Math.max(0.5,1.8-i*0.22);
-        ctx.shadowColor='#00f5ff'; ctx.shadowBlur=10-i; ctx.globalAlpha=0.9-i*0.1; ctx.stroke();
+        ctx.strokeStyle='#4DE3FF'; ctx.lineWidth=Math.max(0.5,1.8-i*0.22);
+        ctx.shadowColor='#4DE3FF'; ctx.shadowBlur=10-i; ctx.globalAlpha=0.9-i*0.1; ctx.stroke();
       });
       ctx.globalAlpha=1;
     });
@@ -562,9 +554,9 @@ const STUDENT_LEADS = [
   const ORBIT_R=260; // reduced orbit radius
 
   const ORBITS=[
-    {rx:170,ry:60,tilt:0,           color:'#00f5ff',speed: 0.038},
-    {rx:170,ry:60,tilt:Math.PI/3,  color:'#a855f7',speed:-0.030},
-    {rx:170,ry:60,tilt:-Math.PI/3, color:'#38bdf8',speed: 0.024},
+    {rx:170,ry:60,tilt:0,           color:'#4DE3FF',speed: 0.038},
+    {rx:170,ry:60,tilt:Math.PI/3,  color:'#5BFFB0',speed:-0.030},
+    {rx:170,ry:60,tilt:-Math.PI/3, color:'#C7FF63',speed: 0.024},
   ];
   const angles=[0,0,0];
   let frame=0, active=false;
@@ -583,23 +575,23 @@ const STUDENT_LEADS = [
     // Outer glow halos
     [90, 68, 50].forEach((hr, i) => {
       ctx.beginPath(); ctx.arc(CX, CY, hr * pulse, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0,200,255,${0.016 + i * 0.009})`; ctx.fill();
+      ctx.fillStyle = `rgba(160,106,139,${0.016 + i * 0.009})`; ctx.fill();
     });
 
     // Nucleus gradient fill
     const ng = ctx.createRadialGradient(CX - nr*0.3, CY - nr*0.3, 1, CX, CY, nr);
-    ng.addColorStop(0, '#aaffff');
-    ng.addColorStop(0.3, '#00f5ff');
-    ng.addColorStop(0.7, '#0055aa');
-    ng.addColorStop(1, '#001a44');
+    ng.addColorStop(0, '#F2F2F2');
+    ng.addColorStop(0.3, '#4DE3FF');
+    ng.addColorStop(0.7, '#C7FF63');
+    ng.addColorStop(1, '#E6C7D8');
     ctx.beginPath(); ctx.arc(CX, CY, nr, 0, Math.PI * 2);
     ctx.fillStyle = ng;
-    ctx.shadowColor = '#00f5ff'; ctx.shadowBlur = 40; ctx.fill(); ctx.shadowBlur = 0;
+    ctx.shadowColor = '#4DE3FF'; ctx.shadowBlur = 40; ctx.fill(); ctx.shadowBlur = 0;
 
     // Nucleus rim
     ctx.beginPath(); ctx.arc(CX, CY, nr, 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(0,245,255,0.8)'; ctx.lineWidth = 2;
-    ctx.shadowColor = '#00f5ff'; ctx.shadowBlur = 20; ctx.stroke(); ctx.shadowBlur = 0;
+    ctx.strokeStyle = 'rgba(160,106,139,0.8)'; ctx.lineWidth = 2;
+    ctx.shadowColor = '#4DE3FF'; ctx.shadowBlur = 20; ctx.stroke(); ctx.shadowBlur = 0;
 
     // Small proton/neutron circles inside nucleus
     const numParticles = 6;
@@ -608,7 +600,7 @@ const STUDENT_LEADS = [
       const pr = nr * 0.42;
       const px = CX + Math.cos(pa) * pr * (0.7 + 0.3 * Math.sin(frame * 0.05 + p));
       const py = CY + Math.sin(pa) * pr * (0.7 + 0.3 * Math.cos(frame * 0.05 + p));
-      const pcol = p % 2 === 0 ? '#00f5ff' : '#a855f7';
+      const pcol = p % 2 === 0 ? '#4DE3FF' : '#5BFFB0';
       ctx.beginPath(); ctx.arc(px, py, 4.5, 0, Math.PI * 2);
       ctx.fillStyle = pcol; ctx.shadowColor = pcol; ctx.shadowBlur = 12; ctx.fill();
     }
@@ -619,21 +611,22 @@ const STUDENT_LEADS = [
     const pulse=1+0.015*Math.sin(frame*0.025);
     ctx.save();
     ctx.beginPath(); ctx.arc(CX,CY,ORBIT_R*pulse,0,Math.PI*2);
-    ctx.strokeStyle='rgba(0,245,255,0.10)'; ctx.lineWidth=1.5; ctx.setLineDash([6,10]); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle='rgba(77,227,255,0.12)'; ctx.lineWidth=1.5; ctx.setLineDash([6,10]); ctx.stroke(); ctx.setLineDash([]);
     ctx.restore();
   }
 
   function atomRender(){
     if(!active) return;
     ORBITS.forEach((o,i)=>{ angles[i]+=o.speed*0.016; });
-    ctx.fillStyle='#010a14'; ctx.fillRect(0,0,W,H);
+    // Keep canvas transparent so page background shows through (no dark square under orbit).
+    ctx.clearRect(0,0,W,H);
     const rg=ctx.createRadialGradient(CX,CY,0,CX,CY,300);
-    rg.addColorStop(0,'rgba(0,25,70,0.5)'); rg.addColorStop(1,'rgba(0,0,0,0)');
+    rg.addColorStop(0,'rgba(14,42,62,0.26)'); rg.addColorStop(1,'rgba(14,42,62,0)');
     ctx.fillStyle=rg; ctx.fillRect(0,0,W,H);
     stars.forEach(s=>{
       const a=0.08+0.4*Math.abs(Math.sin(s.phase+frame*0.007));
       ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(200,225,255,${a})`; ctx.fill();
+      ctx.fillStyle=`rgba(160,106,139,${a * 0.6})`; ctx.fill();
     });
     drawOuterRing();
     ORBITS.forEach((o,idx)=>{
@@ -644,7 +637,7 @@ const STUDENT_LEADS = [
       ctx.strokeStyle=color+'22'; ctx.lineWidth=1.2; ctx.stroke();
       const pt=getPoint(rx,ry,tilt,offset);
       const g=ctx.createRadialGradient(pt.x,pt.y,0,pt.x,pt.y,8);
-      g.addColorStop(0,'#fff'); g.addColorStop(0.4,color); g.addColorStop(1,'transparent');
+      g.addColorStop(0,'#F2F2F2'); g.addColorStop(0.4,color); g.addColorStop(1,'transparent');
       ctx.beginPath(); ctx.arc(pt.x,pt.y,6,0,Math.PI*2);
       ctx.fillStyle=g; ctx.shadowColor=color; ctx.shadowBlur=20; ctx.fill();
       ctx.restore();
@@ -731,7 +724,9 @@ const STUDENT_LEADS = [
 
       node.addEventListener('mouseenter', ()=> showCard(node, ev));
       node.addEventListener('mouseleave', ()=> hideCard());
-      node.addEventListener('click', ()=> openEventPage(ev));
+      node.addEventListener('click', ()=> {
+        window.open(ev.registerLink, '_blank', 'noopener,noreferrer');
+      });
 
       container.appendChild(node);
       if (usingMobileLayout) {
@@ -771,14 +766,12 @@ function buildEventsGrid() {
       </div>
       <div class="egc-name">${ev.name}</div>
       <div class="egc-desc">${ev.shortDesc}</div>
-      <div class="egc-meta">
-        <span><i class="fas fa-users"></i> ${ev.team}</span>
-        <span><i class="fas fa-trophy"></i> ${ev.prize}</span>
+      <div class="egc-image-wrap">
+        <img src="event.jpg" alt="${ev.name} poster" class="egc-image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="egc-image-placeholder" style="display:none"><span>event.jpg</span></div>
       </div>
-      <button class="egc-btn">VIEW DETAILS</button>
+      <a class="egc-btn" href="${ev.registerLink}" target="_blank" rel="noopener noreferrer">REGISTER NOW</a>
     `;
-    card.querySelector('.egc-btn').addEventListener('click', () => openEventPage(ev));
-    card.addEventListener('click', (e) => { if (!e.target.classList.contains('egc-btn')) openEventPage(ev); });
     grid.appendChild(card);
   });
 }
@@ -838,6 +831,7 @@ document.getElementById('fdp-back').addEventListener('click', () => {
 ─────────────────────────────────────────────────────────────────────── */
 (function NavbarModule(){
   const navbar = document.getElementById('navbar');
+  navbar.classList.add('visible');
   navbar.querySelectorAll('.nav-link').forEach(link=>{
     link.addEventListener('click', e=>{
       e.preventDefault();
