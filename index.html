@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charSet="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acumen CSE 2026 – Qubit Zero</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     RAIN CANVAS
+     z-index 9998 — above all page content, below scanlines (9999).
+     First child of <body> so it is never trapped in a stacking context.
+═══════════════════════════════════════════════════════════════ -->
+<canvas id="rainCanvas" aria-hidden="true<div class="gallery-item reveal-item">
+  <img src="path/to/your-image1.jpg" alt="ACUMEN 2025">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="path/to/your-image2.jpg" alt="HACK THE CORE '24">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="path/to/your-image3.jpg" alt="PROJECT EXPO '24">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="path/to/your-image4.jpg" alt="CLOSING CEREMONY">
+</div>"></canvas>
+
+<!-- WELCOME SCREEN -->
+<div id="welcome-screen">
+  <div id="welcome-particles"></div>
+  <div id="welcome-content">
+    <div id="welcome-tagline">CSE DEPARTMENT PRESENTS</div>
+    <h1 id="welcome-title">
+      <span class="wt-acumen">ACUMEN</span>
+      <span class="wt-year">2026</span>
+    </h1>
+    <div id="welcome-sub">QUBIT ZERO</div>
+    <div id="welcome-desc">Quantum Computing &amp; Cybersecurity</div>
+    <div id="welcome-enter">
+      <span id="welcome-enter-text">INITIALIZING BREACH PROTOCOL</span>
+      <div id="welcome-bar"><div id="welcome-bar-fill"></div></div>
+    </div>
+  </div>
+  <div id="welcome-grid"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div id="navbar-logo">
+    <span class="nl-acumen">ACUMEN</span><span class="nl-cse">CSE</span>
+    <span class="nl-year">2026</span>
+  </div>
+  <div id="navbar-links">
+    <a href="#events-section"   class="nav-link">EVENTS</a>
+    <a href="#about-section"    class="nav-link">ABOUT</a>
+    <a href="#sponsors-section" class="nav-link">SPONSORS</a>
+    <a href="#committee-section"class="nav-link">COMMITTEE</a>
+  </div>
+  <div id="navbar-tag">QUBIT ZERO</div>
+</nav>
+
+<!-- SHIELD PHASE -->
+<div id="shield-phase">
+  <canvas id="shieldCanvas" width="900" height="900"></canvas>
+  <div id="click-hint">
+    <span>CLICK THE LOCK TO BREACH</span>
+    <i class="fas fa-lock"></i>
+  </div>
+</div>
+
+<!-- crack overlay -->
+<canvas id="crackCanvas" width="900" height="900"></canvas>
+
+<!-- BRAIN/ORBIT PHASE -->
+<div id="atom-phase">
+  <canvas id="atomCanvas" width="900" height="900"></canvas>
+  <div id="event-nodes-container"></div>
+  <div id="atom-title">
+    <div class="atom-title-inner">ACUMEN <span>CSE</span></div>
+    <div class="atom-subtitle">TECH FEST 2026</div>
+  </div>
+</div>
+
+<!-- hover card -->
+<div id="hover-card">
+  <div id="hc-category"></div>
+  <div id="hc-title"></div>
+  <div id="hc-desc"></div>
+  <a  id="hc-register" href="#" target="_blank">REGISTER NOW</a>
+</div>
+
+<!-- SCROLL SECTIONS -->
+<div id="scroll-container">
+
+  <!-- EVENTS GRID SECTION -->
+  <section id="events-section" class="scroll-section">
+    <div class="section-bg-grid"></div>
+    <div class="section-inner">
+      <div class="section-eyebrow">PARTICIPATE &amp; COMPETE</div>
+      <h2 class="section-title">ALL <span>EVENTS</span></h2>
+      <div class="section-divider"></div>
+
+      <div class="events-filter reveal-item">
+        <button class="filter-btn active" data-filter="ALL">ALL</button>
+        <button class="filter-btn" data-filter="TECHNICAL">TECHNICAL</button>
+        <button class="filter-btn" data-filter="NON-TECHNICAL">NON-TECHNICAL</button>
+      </div>
+
+      <div id="events-grid"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about-section" class="scroll-section">
+    <div class="section-bg-grid"></div>
+    <div class="section-inner">
+      <div class="section-eyebrow">WHO WE ARE</div>
+      <h2 class="section-title">ABOUT <span>ACUMEN CSE</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-body">
+        Acumen CSE is the annual national-level technical symposium of the
+        Department of Computer Science &amp; Engineering at Vasavi College of Engineering.
+        Since its inception, it has been a platform where innovation meets intellect —
+        drawing the brightest minds to compete, collaborate, and create. Every edition raises
+        the bar with cutting-edge themes, industry-grade challenges, and an electrifying atmosphere.
+      </p>
+      <p class="section-body" style="margin-top:16px">
+        <strong>Qubit Zero</strong> — the 2026 edition — pushes the frontier further,
+        centering on Quantum Computing and Cybersecurity: two forces reshaping the digital universe.
+        With 16 events spanning technical innovation and creative challenges, this is Acumen's most
+        ambitious edition yet.
+      </p>
+
+      <div class="about-timeline">
+        <div class="timeline-item reveal-item">
+          <div class="ti-year">2022</div>
+          <div class="ti-text">Post-pandemic return — 1800+ participants, 20 events, strongest comeback edition</div>
+        </div>
+        <div class="timeline-item reveal-item">
+          <div class="ti-year">2023</div>
+          <div class="ti-text">Hybrid format — 2000+ registrations, 24-hr hackathon debut, pan-India reach</div>
+        </div>
+        <div class="timeline-item reveal-item">
+          <div class="ti-year">2024</div>
+          <div class="ti-text">AI-themed edition — record sponsorships, industry partnerships, 2500+ participants</div>
+        </div>
+        <div class="timeline-item reveal-item">
+          <div class="ti-year">2025</div>
+          <div class="ti-text">Cyber &amp; Cloud focus — workshops, keynotes, and 3000+ registrations nationwide</div>
+        </div>
+      </div>
+
+      <div class="about-gallery">
+        <div class="gallery-item reveal-item">
+  <img src="h1.jpg" alt="ACUMEN 2025">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="h2.jpg" alt="HACK THE CORE '24">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="h3.jpg" alt="PROJECT EXPO '24">
+</div>
+<div class="gallery-item reveal-item">
+  <img src="h4.jpg" alt="CLOSING CEREMONY">
+</div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section id="sponsors-section" class="scroll-section">
+    <div class="section-bg-grid"></div>
+    <div class="section-inner">
+      <div class="section-eyebrow">PARTNERS &amp; BACKERS</div>
+      <h2 class="section-title">OUR <span>SPONSORS</span></h2>
+      <div class="section-divider"></div>
+
+      <div class="sponsors-tier">
+        <div class="tier-label">TITLE SPONSOR</div>
+        <div class="sponsors-row">
+          <div class="sponsor-card reveal-item title-sponsor" data-sponsor="title" style="cursor:pointer">
+            <img class="sponsor-logo" src="titlesponsor.jpg" alt="Title Sponsor logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;">
+              <div class="slp-inner">titlesponsor.jpg</div>
+            </div>
+            <div class="sponsor-name">Title Sponsor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsors-tier">
+        <div class="tier-label">GOLD SPONSORS</div>
+        <div class="sponsors-row">
+          <div class="sponsor-card reveal-item" style="--sc-color:#fbbf24;cursor:pointer" data-sponsor="gold1">
+            <img class="sponsor-logo" src="goldsponsor1.jpg" alt="Gold Sponsor 1 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">goldsponsor1.jpg</div></div>
+            <div class="sponsor-name">Gold Sponsor 1</div>
+          </div>
+          <div class="sponsor-card reveal-item" style="--sc-color:#fbbf24;cursor:pointer" data-sponsor="gold2">
+            <img class="sponsor-logo" src="goldsponsor2.jpg" alt="Gold Sponsor 2 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">goldsponsor2.jpg</div></div>
+            <div class="sponsor-name">Gold Sponsor 2</div>
+          </div>
+          <div class="sponsor-card reveal-item" style="--sc-color:#fbbf24;cursor:pointer" data-sponsor="gold3">
+            <img class="sponsor-logo" src="goldsponsor3.jpg" alt="Gold Sponsor 3 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">goldsponsor3.jpg</div></div>
+            <div class="sponsor-name">Gold Sponsor 3</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsors-tier">
+        <div class="tier-label">SILVER SPONSORS</div>
+        <div class="sponsors-row">
+          <div class="sponsor-card reveal-item" style="--sc-color:#94a3b8;cursor:pointer" data-sponsor="silver1">
+            <img class="sponsor-logo" src="silversponsor1.jpg" alt="Silver Sponsor 1 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">silversponsor1.jpg</div></div>
+            <div class="sponsor-name">Silver Sponsor 1</div>
+          </div>
+          <div class="sponsor-card reveal-item" style="--sc-color:#94a3b8;cursor:pointer" data-sponsor="silver2">
+            <img class="sponsor-logo" src="silversponsor2.jpg" alt="Silver Sponsor 2 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">silversponsor2.jpg</div></div>
+            <div class="sponsor-name">Silver Sponsor 2</div>
+          </div>
+          <div class="sponsor-card reveal-item" style="--sc-color:#94a3b8;cursor:pointer" data-sponsor="silver3">
+            <img class="sponsor-logo" src="silversponsor3.jpg" alt="Silver Sponsor 3 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">silversponsor3.jpg</div></div>
+            <div class="sponsor-name">Silver Sponsor 3</div>
+          </div>
+          <div class="sponsor-card reveal-item" style="--sc-color:#94a3b8;cursor:pointer" data-sponsor="silver4">
+            <img class="sponsor-logo" src="silversponsor4.jpg" alt="Silver Sponsor 4 logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="sponsor-logo-placeholder" style="display:none;"><div class="slp-inner">silversponsor4.jpg</div></div>
+            <div class="sponsor-name">Silver Sponsor 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-contact reveal-item">
+        Interested in sponsoring?
+        <a href="mailto:acumen@college.edu">acumen@college.edu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITTEE -->
+  <section id="committee-section" class="scroll-section">
+    <div class="section-bg-grid"></div>
+    <div class="section-inner">
+      <div class="section-eyebrow">THE TEAM BEHIND THE MAGIC</div>
+      <h2 class="section-title">ORGANIZING <span>COMMITTEE</span></h2>
+      <div class="section-divider"></div>
+
+      <div class="committee-group">
+        <div class="cg-label">FACULTY COORDINATORS</div>
+        <div class="committee-row" id="faculty-row"></div>
+      </div>
+
+      <div class="committee-group">
+        <div class="cg-label">STUDENT LEADS</div>
+        <div class="committee-row" id="student-row"></div>
+      </div>
+
+      <!-- footer -->
+      <div class="site-footer reveal-item">
+        <div class="sf-logo">ACUMEN <span>CSE</span> 2026</div>
+        <div class="sf-sub">QUBIT ZERO — Department of Computer Science &amp; Engineering</div>
+        <div class="sf-copy">&copy; 2026 Acumen CSE. All rights reserved.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- EVENT DETAIL PAGE -->
+<div id="event-detail-page">
+  <button id="edp-back"><i class="fas fa-arrow-left"></i> BACK TO EVENTS</button>
+  <div id="edp-inner">
+    <div id="edp-poster-wrap">
+      <div id="edp-poster-placeholder">
+        <span id="edp-poster-label">EVENT POSTER</span>
+      </div>
+    </div>
+    <div id="edp-content">
+      <div id="edp-category"></div>
+      <h1 id="edp-title"></h1>
+      <div class="edp-divider"></div>
+
+      <div class="edp-block">
+        <div class="edp-block-label">ABOUT THE EVENT</div>
+        <p id="edp-description"></p>
+      </div>
+
+      <div class="edp-grid">
+        <div class="edp-block">
+          <div class="edp-block-label"><i class="fas fa-map-marker-alt"></i> VENUE</div>
+          <p id="edp-venue">Main Auditorium, Block A</p>
+        </div>
+        <div class="edp-block">
+          <div class="edp-block-label"><i class="fas fa-calendar-alt"></i> DATE &amp; TIME</div>
+          <p id="edp-date">March 15, 2026 · 9:00 AM</p>
+        </div>
+        <div class="edp-block">
+          <div class="edp-block-label"><i class="fas fa-users"></i> TEAM SIZE</div>
+          <p id="edp-team">1–3 members</p>
+        </div>
+        <div class="edp-block">
+          <div class="edp-block-label"><i class="fas fa-trophy"></i> PRIZE</div>
+          <p id="edp-prize">&#8377;5000 + Certificate</p>
+        </div>
+      </div>
+
+      <div class="edp-block">
+        <div class="edp-block-label"><i class="fas fa-list-ul"></i> RULES</div>
+        <ul id="edp-rules">
+          <li>Participants must carry their college ID.</li>
+          <li>Teams must register before the deadline.</li>
+          <li>Judges' decision is final.</li>
+          <li>Any form of malpractice leads to disqualification.</li>
+        </ul>
+      </div>
+
+      <div class="edp-block">
+        <div class="edp-block-label"><i class="fas fa-phone"></i> COORDINATORS</div>
+        <div id="edp-coordinators">
+          <div class="edp-coord">
+            <span class="ec-name">Coordinator Name</span>
+            <span class="ec-phone">+91 98765 43210</span>
+          </div>
+          <div class="edp-coord">
+            <span class="ec-name">Coordinator Name</span>
+            <span class="ec-phone">+91 98765 43211</span>
+          </div>
+        </div>
+      </div>
+
+      <a id="edp-register" href="#" target="_blank">REGISTER NOW <i class="fas fa-external-link-alt"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- FACULTY DETAIL PAGE -->
+<div id="faculty-detail-page">
+  <button id="fdp-back"><i class="fas fa-arrow-left"></i> BACK</button>
+  <div id="fdp-inner">
+    <div id="fdp-photo-wrap">
+      <img id="fdp-photo" src="" alt="" class="fdp-photo-img">
+      <div class="fdp-photo-overlay"></div>
+    </div>
+    <div id="fdp-content">
+      <div class="fdp-eyebrow">FACULTY COORDINATOR</div>
+      <h1 id="fdp-name"></h1>
+      <div id="fdp-role" class="fdp-role-tag"></div>
+      <div class="edp-divider"></div>
+      <div class="edp-block">
+        <div class="edp-block-label"><i class="fas fa-user-tie"></i> PROFILE</div>
+        <p id="fdp-bio" style="white-space:pre-line"></p>
+      </div>
+      <div class="fdp-traits-box">
+        <i class="fas fa-heart fdp-traits-icon"></i>
+        <p id="fdp-traits"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPONSOR DETAIL PAGE -->
+<div id="sponsor-detail-page">
+  <button id="sdp-back"><i class="fas fa-arrow-left"></i> BACK</button>
+  <div id="sdp-inner">
+    <div class="sdp-logo-wrap">
+      <div class="sdp-logo-placeholder"><span>SPONSOR LOGO</span></div>
+    </div>
+    <div id="sdp-content">
+      <div class="sdp-eyebrow">OUR PARTNER</div>
+      <h1 id="sdp-name">Sponsor Name</h1>
+      <div class="edp-divider"></div>
+      <div class="edp-block">
+        <div class="edp-block-label"><i class="fas fa-building"></i> ABOUT</div>
+        <p id="sdp-desc">This sponsor is a valued partner of Acumen CSE 2026, contributing to the success of the fest through their generous support and collaboration. Their contribution enables us to host world-class events and provide outstanding experiences for all participants. We are grateful for their continued partnership and belief in nurturing technical talent.</p>
+      </div>
+      <div class="edp-block">
+        <div class="edp-block-label"><i class="fas fa-handshake"></i> CONTRIBUTION</div>
+        <p id="sdp-contribution">Supporting the future of technology and student innovation through sponsorship of Acumen CSE 2026.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

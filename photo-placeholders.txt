@@ -1,0 +1,29 @@
+Add these image files in this same folder: mark3/
+
+FACULTY COORDINATORS
+- adilakshmi.jpg
+- komalkaur.jpg
+- jalaja.jpg
+
+STUDENT LEADS
+- faaraz.jpg
+- chinmayateja.jpg
+- navadeep.jpg
+- ganesh.jpg
+- sathwik.jpg
+- rahul.jpg
+- abhinav.jpg
+- prasannakumar.jpg
+- vaishnavi.jpg
+- vikranth.jpg
+- designhead.jpg
+
+SPONSORS
+- titlesponsor.jpg
+- goldsponsor1.jpg
+- goldsponsor2.jpg
+- goldsponsor3.jpg
+- silversponsor1.jpg
+- silversponsor2.jpg
+- silversponsor3.jpg
+- silversponsor4.jpg
