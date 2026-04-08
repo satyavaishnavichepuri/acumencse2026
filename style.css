@@ -243,7 +243,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 90;
+  z-index: 220;
   display: flex;
   align-items: center;
   gap: 32px;
@@ -766,6 +766,7 @@ a {
   min-height: 100vh;
   padding: 100px 5% 80px;
   overflow: visible;
+  scroll-margin-top: 90px;
 }
 
 .scroll-section:nth-child(odd) {
