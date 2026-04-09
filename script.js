@@ -123,6 +123,24 @@ const EVENTS = [
   },
 ];
 
+const EVENT_POSTERS = {
+  'paper-presentation': 'paperpresentation.jpeg',
+  'poster-presentation': 'posterpresentation.jpeg',
+  'project-expo': 'projectexpo.jpeg',
+  'prompt-wars': 'promptwars.jpeg',
+  'bid-n-code': 'bidncode.jpeg',
+  'hack-the-core': 'hackthecore.jpeg',
+  'cryptic-nexus': 'crypticnexus.jpeg',
+  'code-relay': 'coderelay.jpeg',
+  'squid-game': 'squidgame.jpeg',
+  'treasure-hunt': 'treasurehunt.jpeg',
+  'free-fire': 'freefire.jpeg',
+  'relay-rush': 'relayrush.jpeg',
+  'movie-hunt': 'themoviehunt.jpeg',
+  'jail-break': 'jailbreak.jpeg',
+  'ipl-auction': 'iplauction.jpeg',
+};
+
 const FACULTY = [
   {
     id: 'adilakshmi',
@@ -756,6 +774,8 @@ function buildEventsGrid() {
   if (!grid) return;
   grid.innerHTML = '';
   EVENTS.forEach(ev => {
+    const posterFile = EVENT_POSTERS[ev.id] || 'event.jpg';
+    const posterSrc = posterFile === 'event.jpg' ? posterFile : `posters/${posterFile}`;
     const card = document.createElement('div');
     card.className = 'event-grid-card';
     card.style.setProperty('--eg-color', ev.color);
@@ -767,8 +787,8 @@ function buildEventsGrid() {
       <div class="egc-name">${ev.name}</div>
       <div class="egc-desc">${ev.shortDesc}</div>
       <div class="egc-image-wrap">
-        <img src="event.jpg" alt="${ev.name} poster" class="egc-image" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="egc-image-placeholder" style="display:none"><span>event.jpg</span></div>
+        <img src="${posterSrc}" alt="${ev.name} poster" class="egc-image" width="736" height="1104" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="egc-image-placeholder" style="display:none"><span>${posterFile}</span></div>
       </div>
       <a class="egc-btn" href="${ev.registerLink}" target="_blank" rel="noopener noreferrer">REGISTER NOW</a>
     `;

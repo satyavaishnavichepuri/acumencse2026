@@ -971,7 +971,7 @@ a {
 .egc-image-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 736 / 1104;
   border-radius: 10px;
   border: 1px solid color-mix(in srgb, var(--eg-color, var(--cyan)) 45%, rgba(255, 255, 255, 0.15));
   overflow: hidden;
