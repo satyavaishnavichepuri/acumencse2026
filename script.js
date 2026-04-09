@@ -141,6 +141,33 @@ const EVENT_POSTERS = {
   'ipl-auction': 'iplauction.jpeg',
 };
 
+const DETAIL_PAGE_IDS = ['event-detail-page', 'faculty-detail-page', 'sponsor-detail-page'];
+
+function syncDetailPageScrollLock() {
+  const hasOpenDetailPage = DETAIL_PAGE_IDS.some(pageId => {
+    const page = document.getElementById(pageId);
+    return page && page.classList.contains('open');
+  });
+  document.body.classList.toggle('detail-open', hasOpenDetailPage);
+}
+
+function setDetailPageOpen(pageOrId, isOpen) {
+  const page = typeof pageOrId === 'string' ? document.getElementById(pageOrId) : pageOrId;
+  if (!page) return;
+  page.classList.toggle('open', isOpen);
+  syncDetailPageScrollLock();
+}
+
+function closeAllDetailPages() {
+  DETAIL_PAGE_IDS.forEach(pageId => {
+    const page = document.getElementById(pageId);
+    if (page) page.classList.remove('open');
+  });
+  syncDetailPageScrollLock();
+}
+
+window.closeAllDetailPages = closeAllDetailPages;
+
 const FACULTY = [
   {
     id: 'adilakshmi',
@@ -266,14 +293,16 @@ const STUDENT_LEADS = [
       const name = card.querySelector('.sponsor-name');
       if (!name) return;
       sponsorName.textContent = name.textContent;
-      sponsorPage.classList.add('open');
+      setDetailPageOpen(sponsorPage, true);
       sponsorPage.scrollTop = 0;
     });
   });
 
-  sponsorBackButton.addEventListener('click', () => {
-    sponsorPage.classList.remove('open');
-  });
+  if (sponsorBackButton) {
+    sponsorBackButton.addEventListener('click', () => {
+      setDetailPageOpen(sponsorPage, false);
+    });
+  }
 }());
 
 /* ───────────────────────────────────────────────────────────────────────
@@ -811,19 +840,19 @@ function openEventPage(ev){
   document.getElementById('edp-prize').textContent       = ev.prize   || 'TBA';
   document.getElementById('edp-register').href           = ev.registerLink;
   document.getElementById('edp-poster-label').textContent= ev.name + ' — POSTER';
-  page.classList.add('open');
+  setDetailPageOpen(page, true);
   page.scrollTop = 0;
   history.pushState({ eventId:ev.id }, '', '#event/' + ev.id);
 }
 
 document.getElementById('edp-back').addEventListener('click',()=>{
-  document.getElementById('event-detail-page').classList.remove('open');
+  setDetailPageOpen('event-detail-page', false);
   history.pushState({}, '', '#');
 });
 
 window.addEventListener('popstate', e=>{
   if(!e.state || !e.state.eventId){
-    document.getElementById('event-detail-page').classList.remove('open');
+    closeAllDetailPages();
   }
 });
 
@@ -838,12 +867,12 @@ function openFacultyPage(faculty) {
   document.getElementById('fdp-photo').alt = faculty.name;
   document.getElementById('fdp-bio').textContent = faculty.bio;
   document.getElementById('fdp-traits').textContent = faculty.traits;
-  page.classList.add('open');
+  setDetailPageOpen(page, true);
   page.scrollTop = 0;
 }
 
 document.getElementById('fdp-back').addEventListener('click', () => {
-  document.getElementById('faculty-detail-page').classList.remove('open');
+  setDetailPageOpen('faculty-detail-page', false);
 });
 
 /* ───────────────────────────────────────────────────────────────────────
@@ -851,10 +880,13 @@ document.getElementById('fdp-back').addEventListener('click', () => {
 ─────────────────────────────────────────────────────────────────────── */
 (function NavbarModule(){
   const navbar = document.getElementById('navbar');
+
   navbar.classList.add('visible');
+
   navbar.querySelectorAll('.nav-link').forEach(link=>{
     link.addEventListener('click', e=>{
       e.preventDefault();
+      closeAllDetailPages();
       const href = link.getAttribute('href');
       const target = document.querySelector(href);
       if(target) target.scrollIntoView({behavior:'smooth'});
@@ -940,6 +972,9 @@ function buildCommittee() {
   const shieldCanvas= document.getElementById('shieldCanvas');
   let triggered = false;
 
+  // Keep scroll locked until the shield has been broken and home is unlocked.
+  document.body.classList.add('lock-scroll');
+
   function triggerUnlock(clientX, clientY) {
     if (triggered) return;
     if (!window.ShieldModule.isOnLock(clientX, clientY)) return;
@@ -967,6 +1002,7 @@ function buildCommittee() {
           window.EventNodes.buildNodes();
           window.NavbarModule.show();
           scrollCont.classList.add('enabled');
+          document.body.classList.remove('lock-scroll');
           buildEventsGrid();
           buildCommittee();
           // Re-observe new reveal items

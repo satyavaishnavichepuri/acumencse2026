@@ -15,6 +15,7 @@
   --font-heading: 'Train One', sans-serif;
   --font-body: 'Turret Road', sans-serif;
   --font-accent: 'Pixelify Sans', sans-serif;
+  --navbar-height: 48px;
 }
 
 *,
@@ -36,6 +37,14 @@ body {
   overflow-x: hidden;
 }
 
+body.lock-scroll {
+  overflow: hidden;
+}
+
+body.detail-open {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,7 +57,7 @@ a {
   height: 100vh;
   z-index: 18;
   pointer-events: none;
-  opacity: 0.34;
+  opacity: 1;
   mix-blend-mode: screen;
 }
 
@@ -1616,7 +1625,7 @@ a {
 #faculty-detail-page {
   display: none;
   position: fixed;
-  inset: 0;
+  inset: var(--navbar-height) 0 0 0;
   z-index: 151;
   background: var(--dark2);
   overflow-y: auto;
@@ -1679,7 +1688,7 @@ a {
 #fdp-photo-wrap {
   padding-right: 48px;
   position: sticky;
-  top: 72px;
+  top: 16px;
   align-self: start;
 }
 
@@ -2012,6 +2021,10 @@ body::after {
 }
 
 @media(max-width:600px) {
+  :root {
+    --navbar-height: 30px;
+  }
+
   #navbar {
     padding: 10px 12px;
     gap: 12px;
