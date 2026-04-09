@@ -970,7 +970,15 @@ function buildCommittee() {
   const atomTitle   = document.getElementById('atom-title');
   const scrollCont  = document.getElementById('scroll-container');
   const shieldCanvas= document.getElementById('shieldCanvas');
+  const breakSound  = new Audio('shieldbreaking.mp3');
   let triggered = false;
+  breakSound.preload = 'auto';
+  breakSound.volume = 0.75;
+
+  function triggerBreakFeedback() {
+    breakSound.currentTime = 0;
+    breakSound.play().catch(() => {});
+  }
 
   // Keep scroll locked until the shield has been broken and home is unlocked.
   document.body.classList.add('lock-scroll');
@@ -982,6 +990,7 @@ function buildCommittee() {
     triggered = true;
 
     shieldPhase.classList.add('cracking');
+    triggerBreakFeedback();
 
     setTimeout(()=>{
       window.CrackModule.start(450, 530);
