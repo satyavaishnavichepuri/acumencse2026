@@ -985,12 +985,23 @@ function buildCommittee() {
 
   function triggerUnlock(clientX, clientY) {
     if (triggered) return;
-    if (!window.ShieldModule.isOnLock(clientX, clientY)) return;
 
     triggered = true;
 
+    // Add vibration feedback
+    if (navigator.vibrate) {
+      navigator.vibrate([50, 30, 50]);
+    }
+
     shieldPhase.classList.add('cracking');
     triggerBreakFeedback();
+
+    // Additional vibration during crack
+    if (navigator.vibrate) {
+      setTimeout(() => {
+        navigator.vibrate([100, 50, 100, 50, 150]);
+      }, 320);
+    }
 
     setTimeout(()=>{
       window.CrackModule.start(450, 530);
