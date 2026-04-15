@@ -220,7 +220,6 @@ const STUDENT_LEADS = [
   { name: 'Prasanna Kumar',role: 'Non-Tech Lead',      photo: 'prasannakumar.jpg' },
   { name: 'Vaishnavi',     role: 'Tech Lead',         photo: 'vaishnavi.jpg' },
   { name: 'Vikranth',      role: 'Tech Lead',         photo: 'vikranth.jpg' },
-  { name: 'Design Head',   role: 'Design Head',       photo: 'designhead.jpg' },
 ];
 
 /* ───────────────────────────────────────────────────────────────────────
